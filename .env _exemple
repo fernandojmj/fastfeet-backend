@@ -1,0 +1,16 @@
+APP_URL = http://localhost:3001
+
+PORT = 3001
+
+REDIS = 127.0.0.1
+PORT_REDIS =6379
+
+DB_HOST = localhost
+DB_USER =
+DB_PASS =
+DB_DATABASE =
+
+
+//auth
+secret =
+
