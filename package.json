@@ -45,6 +45,6 @@
     "eslint-plugin-standard": "^4.0.0"
   },
   "optionalDependencies": {
-    "**/fsevents": ">=1.2.4"
+    "fsevents": ">=1.2.4"
   }
 }
