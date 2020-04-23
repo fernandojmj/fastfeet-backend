@@ -2,7 +2,7 @@ Arguments:
   C:\Program Files\nodejs\node.exe C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
 
 PATH: 
-  C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_65\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jdk1.8.0_211;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Android\Sdk\platform-tools;"C:\Android\Sdk\tools;";C:\Users\fernando.j.junior\AppData\Local\Microsoft\WindowsApps;C:\Users\fernando.j.junior\AppData\Local\Programs\Git\cmd;C:\Users\fernando.j.junior\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fernando.j.junior\AppData\Roaming\npm;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;
+  C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_65\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jdk1.8.0_211;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Android\Sdk\platform-tools;"C:\Android\Sdk\tools;";C:\Users\fernando.j.junior\AppData\Local\Microsoft\WindowsApps;C:\Users\fernando.j.junior\AppData\Local\Programs\Git\cmd;C:\Users\fernando.j.junior\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fernando.j.junior\AppData\Roaming\npm
 
 Yarn version: 
   1.13.0
@@ -14,17 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/**%2ffsevents: Request "https://registry.yarnpkg.com/**%2ffsevents" returned a 405
-      at Request.params.callback [as _callback] (C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66264:18)
-      at Request.self.callback (C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129397:22)
-      at Request.emit (events.js:193:13)
-      at Request.<anonymous> (C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:130369:10)
-      at Request.emit (events.js:193:13)
-      at IncomingMessage.<anonymous> (C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:130291:12)
-      at Object.onceWrapper (events.js:281:20)
-      at IncomingMessage.emit (events.js:198:15)
-      at endReadableNT (_stream_readable.js:1139:12)
-      at processTicksAndRejections (internal/process/task_queues.js:81:17)
+  SyntaxError: C:\Sistemas\fastfeet-backend\package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\fernando.j.junior\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
 
 npm manifest: 
   {
@@ -41,7 +36,6 @@ npm manifest:
       "start": "nodemon src/index.js"
     },
     "dependencies": {
-      "bcrypt": "^3.0.6",
       "bcryptjs": "^2.4.3",
       "bee-queue": "^1.2.3",
       "cors": "^2.8.5",
@@ -49,13 +43,11 @@ npm manifest:
       "express": "^4.17.0",
       "express-handlebars": "^4.0.3",
       "jsonwebtoken": "^8.5.1",
-      "jwt": "^0.2.0",
       "kue": "^0.11.6",
       "moment": "^2.24.0",
       "moment-timezone": "^0.5.28",
       "multer": "^1.4.2",
       "mysql2": "^2.1.0",
-      "node-base64": "^0.0.1",
       "nodemailer": "^6.4.6",
       "nodemailer-express-handlebars": "^4.0.0",
       "nodemon": "^1.19.0",
@@ -72,10 +64,7 @@ npm manifest:
       "eslint-plugin-node": "^9.0.1",
       "eslint-plugin-promise": "^4.1.1",
       "eslint-plugin-standard": "^4.0.0"
-    },
-    "optionalDependencies": {
-      "**/fsevents": ">=1.2.4"
-    }
+  
   }
 
 yarn manifest: 
@@ -372,14 +361,6 @@ Lockfile:
       isobject "^3.0.1"
       mixin-deep "^1.2.0"
       pascalcase "^0.1.1"
-  
-  bcrypt@^3.0.6:
-    version "3.0.6"
-    resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-3.0.6.tgz#f607846df62d27e60d5e795612c4f67d70206eb2"
-    integrity sha512-taA5bCTfXe7FUjKroKky9EXpdhkVvhE5owfxfLYodbrAR1Ul3juLmIQmIQBK4L9a5BuUcE6cqmwT+Da20lF9tg==
-    dependencies:
-      nan "2.13.2"
-      node-pre-gyp "0.12.0"
   
   bcryptjs@^2.4.3:
     version "2.4.3"
@@ -1582,6 +1563,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
     integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
   
+  fsevents@>=1.2.4:
+    version "2.1.2"
+    resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.1.2.tgz#4c0a1fb34bc68e543b4b82a9ec392bfbda840805"
+    integrity sha512-R4wDiBwZ0KzpgOWetKDug1FZcYhqYnUYKtfZYt4mD5SBz76q0KR4Q9o7GIPamsVPGmW3EYPPJ0dOOjvx32ldZA==
+  
   fsevents@^1.2.7:
     version "1.2.9"
     resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.2.9.tgz#3f5ed66583ccd6f400b5a00db6f7e861363e388f"
@@ -2271,13 +2257,6 @@ Lockfile:
       jwa "^1.4.1"
       safe-buffer "^5.0.1"
   
-  jwt@^0.2.0:
-    version "0.2.0"
-    resolved "https://registry.yarnpkg.com/jwt/-/jwt-0.2.0.tgz#4c9ad46bc84bfeaf91556ecce7c57aa578cbc8b8"
-    integrity sha1-TJrUa8hL/q+RVW7M58V6pXjLyLg=
-    dependencies:
-      node-base64 "0.0.1"
-  
   kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
     version "3.2.2"
     resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -2693,11 +2672,6 @@ Lockfile:
     dependencies:
       lru-cache "^4.1.3"
   
-  nan@2.13.2:
-    version "2.13.2"
-    resolved "https://registry.yarnpkg.com/nan/-/nan-2.13.2.tgz#f51dc7ae66ba7d5d55e1e6d4d8092e802c9aefe7"
-    integrity sha512-TghvYc72wlMGMVMluVo9WRJc0mB8KxxF/gZ4YYFy7V2ZQX9l7rgbPg7vjS9mt6U5HXODVFVI2bOduCzwOMv/lw==
-  
   nan@^2.12.1:
     version "2.14.0"
     resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
@@ -2775,17 +2749,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
     integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
   
-  node-base64@0.0.1, node-base64@^0.0.1:
-    version "0.0.1"
-    resolved "https://registry.yarnpkg.com/node-base64/-/node-base64-0.0.1.tgz#ee3e095f97e9f4d72fb3dea98bcb2d25c8716b03"
-    integrity sha1-7j4JX5fp9Ncvs96pi8stJchxawM=
-  
   node-modules-regexp@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz#8d9dbe28964a4ac5712e9131642107c71e90ec40"
     integrity sha1-jZ2+KJZKSsVxLpExZCEHxx6Q7EA=
   
-  node-pre-gyp@0.12.0, node-pre-gyp@^0.12.0:
+  node-pre-gyp@^0.12.0:
     version "0.12.0"
     resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
     integrity sha512-4KghwV8vH5k+g2ylT+sLTjy5wmUOb9vPhnM8NHvRf9dHmnW/CndrFXy2aRPaPST6dugXSdHXfeaHQm77PIz/1A==

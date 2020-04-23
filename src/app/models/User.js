@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import auth from "../../config/auth";
 
@@ -12,17 +12,17 @@ class User extends Model {
         email: Sequelize.STRING,
         avatar: Sequelize.STRING,
         password: Sequelize.VIRTUAL,
-        password_hash: Sequelize.STRING
+        password_hash: Sequelize.STRING,
       },
       {
         sequelize,
         timestamps: true,
         underscored: true,
-        underscoredAll: true
+        underscoredAll: true,
       }
     );
 
-    this.addHook("beforeSave", async user => {
+    this.addHook("beforeSave", async (user) => {
       if (user.password) {
         user.password_hash = await bcrypt.hash(user.password, 8);
       }
