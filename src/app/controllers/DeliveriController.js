@@ -7,9 +7,9 @@ import DeliveryManModel from "../models/DeliveryMan";
 import Mail from "../../lib/Mail";
 
 import Files from "../models/File";
-import Queue from "../../lib/Queue";
+// import Queue from "../../lib/Queue";
 
-import DeliveryReadyMail from "../jobs/DeliveryReadyMail";
+// import DeliveryReadyMail from "../jobs/DeliveryReadyMail";
 
 class DeliveriController {
   async show(req, res) {
