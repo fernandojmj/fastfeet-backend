@@ -1,17 +1,14 @@
 import Sequelize, { Model } from "sequelize";
+import "dotenv/config";
 
 class File extends Model {
   static init(sequelize) {
     super.init(
       {
         name: Sequelize.STRING,
-        path: Sequelize.STRING,
-        url: {
-          type: Sequelize.VIRTUAL,
-          get() {
-            return `${process.env.APP_URL}/files/${this.path}`;
-          },
-        },
+        size: Sequelize.NUMBER,
+        key: Sequelize.STRING,
+        url: Sequelize.STRING,
       },
       {
         sequelize,
@@ -20,7 +17,16 @@ class File extends Model {
         underscoredAll: true,
       }
     );
+
+    File.addHook("beforeCreate", (file, options) => {
+      console.log("entrou no hook");
+      console.log(file);
+      if (file.url === "") {
+        file.url = `${process.env.APP_URL}/files/${file.key}`;
+      }
+    });
     return this;
   }
 }
+
 export default File;

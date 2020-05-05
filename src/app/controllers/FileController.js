@@ -4,11 +4,18 @@ class FileController {
   async store(request, response) {
     try {
       console.log("entrou no back");
-      const { originalname: name, filename: path } = request.file;
+      const {
+        originalname: name,
+        size,
+        key,
+        location: url = "",
+      } = request.file;
 
       const file = await modelFile.create({
         name,
-        path,
+        size,
+        key,
+        url,
       });
 
       return response.status(201).json(file);

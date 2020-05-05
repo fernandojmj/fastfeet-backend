@@ -13,7 +13,17 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      path: {
+      size: {
+        allowNull: false,
+        unique: false,
+        type: Sequelize.INTEGER,
+      },
+      key: {
+        allowNull: false,
+        unique: false,
+        type: Sequelize.STRING,
+      },
+      url: {
         allowNull: false,
         unique: false,
         type: Sequelize.STRING,
