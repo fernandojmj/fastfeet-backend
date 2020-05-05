@@ -10,7 +10,7 @@ class DeliveryManController {
         {
           model: ModelFile,
           as: "avatarid",
-          attributes: ["url", "path", "id"],
+          attributes: ["url", "name", "id"],
         },
       ],
       where: {
