@@ -7,6 +7,7 @@ import DeliveryManModel from "../models/DeliveryMan";
 import Mail from "../../lib/Mail";
 
 import Files from "../models/File";
+import { config } from "dotenv/lib/main";
 // import Queue from "../../lib/Queue";
 
 // import DeliveryReadyMail from "../jobs/DeliveryReadyMail";
@@ -161,11 +162,23 @@ class DeliveriController {
 
   async withdrawal(req, res) {
     const Op = Sequelize.Op;
+    console.log("Realizando Retirada");
+    console.log(process.env.HOUR_END);
+    console.log(process.env.HOUR_START);
+
+    const configHourStart = process.env.HOUR_START;
+    const configHourEnd = process.env.HOUR_END;
     // moment.locale();
     const horaAtual = moment().hour();
-    const hourEnd = await !moment(horaAtual).isAfter(18);
-    const hourStart = await moment(horaAtual).isAfter(8);
+    const hourEnd = await moment(horaAtual).isBefore(parseInt(configHourEnd));
+    const hourStart = await moment(horaAtual).isAfter(
+      parseInt(configHourStart)
+    );
     let returnWithdrawal = false;
+
+    console.log(horaAtual);
+    console.log(hourEnd);
+    console.log(hourStart);
 
     const qtdRetiradaDia = await Deliveri.findAll({
       where: {
